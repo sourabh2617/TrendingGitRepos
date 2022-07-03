@@ -19,7 +19,7 @@ class TrendingRepositoryRouter(private val eventTracker: HttpEventTracker<ArrayL
 	private val trendingRepositoryApiCallback: TrendingRepositoryApiCallback by lazy {
 		NetworkUtils.retrofitBuilder.build().create(TrendingRepositoryApiCallback::class.java)
 	}
-	
+
 	/**
 	 * Initialize the call.
 	 */
@@ -27,7 +27,7 @@ class TrendingRepositoryRouter(private val eventTracker: HttpEventTracker<ArrayL
 		call = trendingRepositoryApiCallback.getRepositories()
 		HttpOperationWrapper<ArrayList<GitHubRepo>>().initCall(call, this)
 	}
-	
+
 	/**
 	 * Cancel ongoing retrofit call.
 	 */
@@ -36,7 +36,7 @@ class TrendingRepositoryRouter(private val eventTracker: HttpEventTracker<ArrayL
 			call.cancel()
 		}
 	}
-	
+
 	override fun onResponse(
 			call: Call<ArrayList<GitHubRepo>>,
 			result: ArrayList<GitHubRepo>?,
