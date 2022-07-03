@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/SKSharma/AndroidStudioProjects/TrendingGitRepos/app/src/main/res/layout/activity_main.xml" value="0.11458333333333333" />
         <entry key="..\:/Users/SKSharma/AndroidStudioProjects/TrendingGitRepos/app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="..\:/Users/SKSharma/AndroidStudioProjects/TrendingGitRepos/app/src/main/res/layout/activity_trending.xml" value="0.11458333333333333" />
+        <entry key="..\:/Users/SKSharma/AndroidStudioProjects/TrendingGitRepos/app/src/main/res/layout/item_trending_repositories_list.xml" value="0.11458333333333333" />
+        <entry key="..\:/Users/SKSharma/AndroidStudioProjects/TrendingGitRepos/app/src/main/res/layout/item_trending_repositories_skeleton.xml" value="0.11458333333333333" />
+        <entry key="..\:/Users/SKSharma/AndroidStudioProjects/TrendingGitRepos/app/src/main/res/layout/layout_error.xml" value="0.11458333333333333" />
       </map>
     </option>
   </component>

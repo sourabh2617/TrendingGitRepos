@@ -78,22 +78,6 @@ class TrendingActivity : AppCompatActivity(), Observer<Triple<String, String, Ar
 		errorLayout.errorRetryBtn.setOnClickListener {getTrendingRepositories(true)}
 		skeletonScreen = Skeleton.bind(trendingRecyclerView).adapter(trendingRepositoryAdapter).load(R.layout.item_trending_repositories_skeleton)
 				.duration(1300).show()
-		val popupMenu = PopupMenu(this, menuImage, Gravity.BOTTOM)
-		popupMenu.menuInflater.inflate(R.menu.menu_activity_trending, popupMenu.menu)
-		popupMenu.setOnMenuItemClickListener {
-			when (it.itemId) {
-				R.id.action_sort_by_stars -> {
-					trendingRepositoryAdapter.sortByStars()
-					true
-				}
-				R.id.action_sort_by_name -> {
-					trendingRepositoryAdapter.sortByName()
-					true
-				}
-				else -> false
-			}
-		}
-		menuImage.setOnClickListener {popupMenu.show()}
 	}
 	
 	/**

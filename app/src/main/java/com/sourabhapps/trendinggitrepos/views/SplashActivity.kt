@@ -26,7 +26,7 @@ class SplashActivity : AppCompatActivity(), Runnable {
 	}
 	
 	override fun run() {
-		startActivity(Intent(this, MainActivity::class.java))
+		startActivity(Intent(this, TrendingActivity::class.java))
 		finish()
 	}
 }
