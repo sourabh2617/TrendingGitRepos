@@ -26,6 +26,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".views.MainActivity" />
+        <activity android:name=".views.TrendingActivity" />
     </application>
 </manifest>

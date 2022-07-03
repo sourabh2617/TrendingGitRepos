@@ -1,9 +1,3 @@
-/*
- * Created by Onkar Nene on 17/8/19 2:38 PM
- *
- * Copyright (c) 2019 Onkar Nene. All rights reserved.
- */
-
 package com.sourabhapps.trendinggitrepos.views
 
 import android.content.Intent
