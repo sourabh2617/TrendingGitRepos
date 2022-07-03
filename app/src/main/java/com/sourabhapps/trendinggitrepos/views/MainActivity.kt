@@ -1,7 +1,8 @@
-package com.sourabhapps.trendinggitrepos
+package com.sourabhapps.trendinggitrepos.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.sourabhapps.trendinggitrepos.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

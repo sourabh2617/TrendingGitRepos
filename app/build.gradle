@@ -45,7 +45,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:${appcompat_version}"
     implementation "androidx.core:core-ktx:${core_ktx_version}"
 
-    implementation "org.jetbrains.anko:anko:${anko_version}"
+    implementation "org.jetbrains.anko:anko:0.10.8"
     implementation "androidx.recyclerview:recyclerview:${recycler_view_version}"
     implementation "androidx.cardview:cardview:${card_view_version}"
     implementation "androidx.annotation:annotation:${annotation_version}"
@@ -81,4 +81,3 @@ dependencies {
     implementation "androidx.room:room-runtime:${room_version}"
     kapt "androidx.room:room-compiler:${room_version}"
 }
-apply plugin: "com.google.gms.google-services"
