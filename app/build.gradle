@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -10,10 +12,12 @@ android {
         applicationId "com.sourabhapps.trendinggitrepos"
         minSdk 21
         targetSdk 32
-        versionCode 1
-        versionName "1.0"
+        versionCode version_code
+        versionName version_name
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary true
     }
 
     buildTypes {
@@ -29,15 +33,52 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
+    implementation "androidx.constraintlayout:constraintlayout:${constraint_layout_version}"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // Kotlin, support & design libraries
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlin_version}"
+    implementation "androidx.appcompat:appcompat:${appcompat_version}"
+    implementation "androidx.core:core-ktx:${core_ktx_version}"
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.2'
-    implementation 'com.google.android.material:material:1.6.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation "org.jetbrains.anko:anko:0.10.8"
+    implementation "androidx.recyclerview:recyclerview:${recycler_view_version}"
+    implementation "androidx.cardview:cardview:${card_view_version}"
+    implementation "androidx.annotation:annotation:${annotation_version}"
+    implementation "com.google.android.material:material:${material_version}"
+    implementation "androidx.lifecycle:lifecycle-extensions:${lifecycle_extensions_version}"
+    implementation "androidx.multidex:multidex:${multidex_version}"
+
+    // Testing
+    testImplementation "junit:junit:${junit_version}"
+    androidTestImplementation "androidx.test.ext:junit:${test_runner_version}"
+    androidTestImplementation "androidx.test.espresso:espresso-core:${espresso_core_version}"
+
+    // Network
+    implementation "com.squareup.retrofit2:retrofit:${retrofit_version}"
+    implementation "com.squareup.retrofit2:converter-gson:${retrofit_version}"
+
+    // Gson - Java serialization/deserialization
+    implementation "com.google.code.gson:gson:${gson_version}"
+
+//    // Dependency injection
+    implementation "com.google.dagger:dagger:${dagger_version}"
+    kapt "com.google.dagger:dagger-compiler:${dagger_version}"
+
+    // Image loading
+    implementation "com.github.bumptech.glide:glide:${glide_version}"
+    kapt "com.github.bumptech.glide:compiler:${glide_version}"
+
+    // Skeleton loading
+    implementation "com.ethanhua:skeleton:1.1.2"
+    implementation "io.supercharge:shimmerlayout:${shimmer_layout_version}"
+
+    // Room
+    implementation "androidx.room:room-runtime:${room_version}"
+    kapt "androidx.room:room-compiler:${room_version}"
 }
